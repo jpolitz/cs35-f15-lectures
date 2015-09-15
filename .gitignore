@@ -1,3 +1,5 @@
 */a.out
 *.dSYM
 *.swp
+.DS_Store
+*.o
