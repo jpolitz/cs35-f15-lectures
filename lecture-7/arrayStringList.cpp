@@ -46,7 +46,9 @@ void ASList::addTail(string s) {
   size += 1;
 }
 
-void ASList::set(int index, string s) { }
+void ASList::set(int index, string s) {
+  elements[index] = s;
+}
 
 void ASList::addHead(string s) {
   expandCapacity();

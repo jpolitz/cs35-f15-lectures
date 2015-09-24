@@ -35,6 +35,12 @@ TEST(a_test) {
 
   // here
 
+  mylist->set(3, "f");
+  CHECK_EQUAL("d", mylist->get(0));
+  CHECK_EQUAL("a", mylist->get(1));
+  CHECK_EQUAL("b", mylist->get(2));
+  CHECK_EQUAL("f", mylist->get(3));
+
   delete mylist;
 }
 
