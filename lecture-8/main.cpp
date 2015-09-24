@@ -5,7 +5,7 @@
 using namespace std;
 
 TEST(a_test) {
-  LSList* mylist = new LSList;
+  NSList* mylist = new NSList;
 
   CHECK_EQUAL(0, mylist->getSize());
   CHECK(mylist->isEmpty());
@@ -20,11 +20,16 @@ TEST(a_test) {
   mylist->addTail("b");
   mylist->addTail("c");
 
+  // here
+
   CHECK_EQUAL("b", mylist->get(1));
   CHECK_EQUAL("c", mylist->get(2));
   CHECK_EQUAL(3, mylist->getSize());
 
+  // here
+
   delete mylist;
+
 }
 
 int main() {

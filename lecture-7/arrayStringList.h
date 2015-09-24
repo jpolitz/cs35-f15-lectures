@@ -10,8 +10,11 @@ class ASList : public SList {
     int capacity;
     // How many elements could fit before making a bigger array
     string* elements;
+
+    void expandCapacity();
   public:
     ASList();
+    ~ASList();
     bool isEmpty();
     int getSize();
     void addHead(string s);

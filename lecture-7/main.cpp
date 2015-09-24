@@ -20,9 +20,22 @@ TEST(a_test) {
   mylist->addTail("b");
   mylist->addTail("c");
 
+  // here
+
   CHECK_EQUAL("b", mylist->get(1));
   CHECK_EQUAL("c", mylist->get(2));
   CHECK_EQUAL(3, mylist->getSize());
+
+  mylist->addHead("d");
+  CHECK_EQUAL(4, mylist->getSize());
+  CHECK_EQUAL("a", mylist->get(1));
+  CHECK_EQUAL("b", mylist->get(2));
+  CHECK_EQUAL("c", mylist->get(3));
+  CHECK_EQUAL("d", mylist->get(0));
+
+  // here
+
+  delete mylist;
 }
 
 int main() {
