@@ -41,6 +41,8 @@ TEST(a_test) {
   CHECK_EQUAL("b", mylist->get(2));
   CHECK_EQUAL("f", mylist->get(3));
 
+  CHECK_THROW(mylist->get(55), runtime_error);
+
   delete mylist;
 }
 

@@ -1,4 +1,5 @@
 #include <string>
+#include <stdexcept>
 #include <iostream>
 #include "stringList.h"
 #include "arrayStringList.h"
@@ -24,6 +25,9 @@ bool ASList::isEmpty() {
 }
 
 string ASList::get(int index) {
+  if(index >= size) {
+    throw runtime_error("Index out of range");
+  }
   return elements[index];
 }
 
@@ -35,7 +39,6 @@ void ASList::expandCapacity() {
       newArrayPtr[x] = elements[x];
     }
     delete [] elements;
-    // elements[0]
     elements = newArrayPtr;
   }
 }
@@ -47,6 +50,9 @@ void ASList::addTail(string s) {
 }
 
 void ASList::set(int index, string s) {
+  if(index >= size) {
+    throw runtime_error("Index out of range");
+  }
   elements[index] = s;
 }
 
