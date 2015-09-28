@@ -1,6 +1,7 @@
 #include "unittest-cpp/UnitTest++/UnitTest++.h"
 #include "stringList.h"
 #include "arrayStringList.h"
+#include <stdexcept>
 
 using namespace std;
 
