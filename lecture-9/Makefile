@@ -1,5 +1,5 @@
 CXX = clang++
-CXXFLAGS = ""
+CXXFLAGS = "-g"
 OFILES = "unittest-cpp/CMakeFiles/UnitTest++.dir/UnitTest++/"
 VG="/Users/joe/Downloads/valgrind-3.11.0/vg-in-place"
 

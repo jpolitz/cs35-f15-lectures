@@ -35,9 +35,12 @@ TEST(browser_example) {
   popped = s->pop();
   CHECK_EQUAL(popped, "google.com");
   CHECK(s->isEmpty());
+
+  delete s;
   
 }
 
 int main() {
   return UnitTest::RunAllTests();
 }
+
