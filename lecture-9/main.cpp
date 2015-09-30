@@ -1,6 +1,7 @@
 #include "unittest-cpp/UnitTest++/UnitTest++.h"
 #include "stringList.h"
 #include "arrayStringList.h"
+#include <stdexcept>
 
 using namespace std;
 
@@ -46,6 +47,62 @@ TEST(a_test) {
   delete mylist;
 }
 
+
+
+
+
+TEST(remove) {
+  SList* mylist = new ASList;
+
+  mylist->addTail("a");
+  mylist->addTail("b");
+  mylist->addTail("c");
+
+  mylist->removeTail();
+
+  CHECK_EQUAL(mylist->getSize(), 2);
+  CHECK_THROW(mylist->get(2), runtime_error);
+  CHECK_EQUAL(mylist->get(1), "b");
+
+  mylist->removeHead();
+
+  CHECK_EQUAL(mylist->getSize(), 1);
+  CHECK_EQUAL(mylist->get(0), "b");
+
+}
+
 int main() {
   return UnitTest::RunAllTests();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

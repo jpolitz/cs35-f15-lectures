@@ -19,6 +19,8 @@ class ASList : public SList {
     int getSize();
     void addHead(string s);
     void addTail(string s);
+    void removeHead();
+    void removeTail();
     void set(int index, string s);
     string get(int index);
 };
